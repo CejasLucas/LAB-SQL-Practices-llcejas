@@ -1,10 +1,10 @@
-# 💻 📊 Tables for the project
+# 📊 Tables for the project
 
 | Column SHIP            | Description 
 |------------------------|-------------
 | `ship_id`              | (PK)  
 | `name_or_nickname`     | VARCHAR(200)  
-| `registration_number`  | VARCHAR(200)
+| `registration_number`  | VARCHAR(200) (unique)
 | `start_of_activity`    | DATE
 | `origin_city`          | VARCHAR(200)
 | `nationality`          | VARCHAR(200)
@@ -18,7 +18,7 @@
 | `first_name`           | VARCHAR(100)
 | `last_name`            | VARCHAR(100)
 | `email`                | VARCHAR(200) (unique)
-| `passport_number`      | VARCHAR(50)
+| `passport_number`      | VARCHAR(50) (unique)
 | `home_city`            | VARCHAR(100)
 | `nationality`          | VARCHAR(100)
 | `birth_date`           | DATE

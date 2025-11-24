@@ -1,11 +1,9 @@
 USE PortFleetDB;
 GO
 
-IF OBJECT_ID('dbo.SHIP') IS NULL
-    PRINT 'La tabla SHIP >>> NO existe';
-ELSE
-    PRINT 'La tabla SHIP >>> SI existe';
-
+SELECT name AS Tabla, create_date AS FechaCreacion
+FROM sys.tables
+ORDER BY name;
 
 INSERT INTO SHIP (name_or_nickname, registration_number, start_of_activity, origin_city, nationality) VALUES
 ('South Sea', 'AR-MDS-4512', '2010-03-12', 'Mar del Plata', 'Argentina'),
@@ -57,7 +55,57 @@ INSERT INTO SHIP (name_or_nickname, registration_number, start_of_activity, orig
 ('Southern Aurora', 'AR-ADS-9288', '2013-06-15', 'Río Gallegos', 'Argentina'),
 ('Emerald Voyager', 'IE-EMV-6201', '2015-12-19', 'Dublin', 'Ireland'),
 ('Northern Aurora', 'RU-NAR-5821', '2010-05-12', 'Saint Petersburg', 'Russia'),
-('Atlantic Voyager', 'US-ATV-9034', '2005-12-11', 'Miami', 'United States');
+('Atlantic Voyager', 'US-ATV-9034', '2005-12-11', 'Miami', 'United States')
+('Ocean Breeze', 'US-OBR-1120', '2011-06-14', 'New York', 'United States'),
+('Mar del Sol', 'AR-MDS-2201', '2009-09-09', 'Mar del Plata', 'Argentina'),
+('Pacific Dream', 'CL-PDR-3302', '2015-03-22', 'Valparaíso', 'Chile'),
+('Golden Wave', 'AU-GWV-4411', '2017-12-01', 'Melbourne', 'Australia'),
+('Sea Dragon', 'CN-SDG-5522', '2010-05-18', 'Guangzhou', 'China'),
+('Aurora Star', 'NO-AST-6633', '2013-07-27', 'Oslo', 'Norway'),
+('Blue Dolphin', 'BR-BDP-7744', '2016-11-11', 'Santos', 'Brazil'),
+('Coral Breeze', 'ZA-CBZ-8855', '2012-02-02', 'Durban', 'South Africa'),
+('Emerald Sea', 'IE-EMS-9966', '2014-04-04', 'Galway', 'Ireland'),
+('Silver Moon', 'UK-SMN-1077', '2018-08-08', 'London', 'United Kingdom'),
+('Northern Wind', 'RU-NWN-1188', '2007-01-01', 'Murmansk', 'Russia'),
+('Southern Cross', 'AR-SCR-2299', '2005-05-05', 'Buenos Aires', 'Argentina'),
+('Atlantic Spirit', 'US-ASP-3300', '2019-09-09', 'Norfolk', 'United States'),
+('Baltic Pearl', 'SE-BPR-4411', '2011-11-11', 'Stockholm', 'Sweden'),
+('Mediterranean Sun', 'ES-MSN-5522', '2010-10-10', 'Barcelona', 'Spain'),
+('Ocean Jewel', 'PT-OJL-6633', '2013-03-03', 'Lisbon', 'Portugal'),
+('Sea Voyager', 'FI-SVG-7744', '2012-12-12', 'Turku', 'Finland'),
+('Blue Lagoon', 'NZ-BLG-8855', '2015-05-15', 'Wellington', 'New Zealand'),
+('Golden Horizon', 'UY-GHZ-9966', '2008-08-08', 'Montevideo', 'Uruguay'),
+('Polar Breeze', 'IS-PBZ-1077', '2017-07-07', 'Akureyri', 'Iceland'),
+('Mar Azul', 'AR-MAZ-1188', '2006-06-06', 'Puerto Madryn', 'Argentina'),
+('Sea Spirit', 'CA-SSP-2299', '2014-04-14', 'Toronto', 'Canada'),
+('Ocean Crest', 'MX-OCR-3300', '2011-01-21', 'Acapulco', 'Mexico'),
+('Aurora Queen', 'GR-AQN-4411', '2013-03-13', 'Athens', 'Greece'),
+('Coral Princess', 'PH-CPS-5522', '2016-06-16', 'Cebu', 'Philippines'),
+('Silver Wave', 'IT-SWV-6633', '2010-10-20', 'Naples', 'Italy'),
+('Blue Star', 'DE-BST-7744', '2012-02-22', 'Bremen', 'Germany'),
+('Golden Sun', 'UK-GSN-8855', '2015-05-25', 'Glasgow', 'United Kingdom'),
+('Sea Crown', 'RU-SCR-9966', '2009-09-29', 'Vladivostok', 'Russia'),
+('Ocean King', 'US-OKG-1077', '2018-08-30', 'Los Angeles', 'United States'),
+('Mar del Norte', 'AR-MDN-1188', '2007-07-07', 'Bahía Blanca', 'Argentina'),
+('Pacific Queen', 'CL-PQN-2299', '2011-11-11', 'Coquimbo', 'Chile'),
+('Golden Pearl', 'AU-GPR-3300', '2013-03-03', 'Perth', 'Australia'),
+('Sea Jewel', 'CN-SJL-4411', '2016-06-06', 'Hong Kong', 'China'),
+('Aurora Crest', 'NO-ACR-5522', '2010-10-10', 'Stavanger', 'Norway'),
+('Blue Horizon II', 'BR-BHZ-6633', '2012-12-12', 'Rio de Janeiro', 'Brazil'),
+('Coral Queen', 'ZA-CQN-7744', '2015-05-15', 'Cape Town', 'South Africa'),
+('Emerald Crown', 'IE-ECR-8855', '2008-08-08', 'Cork', 'Ireland'),
+('Silver Crest', 'UK-SCR-9966', '2017-07-07', 'Southampton', 'United Kingdom'),
+('Northern Jewel', 'RU-NJL-1077', '2005-05-05', 'Arkhangelsk', 'Russia'),
+('Southern Jewel', 'AR-SJL-1188', '2004-04-04', 'Rawson', 'Argentina'),
+('Atlantic Jewel', 'US-AJL-2299', '2019-09-09', 'New Orleans', 'United States'),
+('Baltic Jewel', 'SE-BJL-3300', '2011-11-11', 'Malmö', 'Sweden'),
+('Mediterranean Jewel', 'ES-MJL-4411', '2013-03-03', 'Valencia', 'Spain'),
+('Ocean Princess', 'PT-OPR-5522', '2016-06-06', 'Porto', 'Portugal'),
+('Sea Princess', 'FI-SPR-6633', '2010-10-10', 'Helsinki', 'Finland'),
+('Blue Princess', 'NZ-BPR-7744', '2012-12-12', 'Auckland', 'New Zealand'),
+('Golden Princess', 'UY-GPR-8855', '2015-05-15', 'Colonia', 'Uruguay'),
+('Polar Princess', 'IS-PPR-9966', '2008-08-08', 'Reykjavik', 'Iceland'),
+('Mar Princesa', 'AR-MPR-1077', '2006-06-06', 'Buenos Aires', 'Argentina');
 
 
 
@@ -149,31 +197,51 @@ INSERT INTO HARBOR (name, region, city, country, port_type) VALUES
 ('Port of Mumbai', 'Maharashtra', 'Mumbai', 'India', 'DAY'),
 ('Port of Dublin', 'Leinster', 'Dublin', 'Ireland', 'NIGHT'),
 ('Port of Helsinki', 'Uusimaa', 'Helsinki', 'Finland', 'DAY'),
-('Port of Casablanca', 'Casablanca-Settat', 'Casablanca', 'Morocco', 'NIGHT');
+('Port of Casablanca', 'Casablanca-Settat', 'Casablanca', 'Morocco', 'NIGHT')
+('Port of New York', 'New York State', 'New York', 'United States', 'DAY'),
+('Port of Los Angeles', 'California', 'Los Angeles', 'United States', 'NIGHT'),
+('Port of Antwerp', 'Flanders', 'Antwerp', 'Belgium', 'DAY'),
+('Port of Genoa', 'Liguria', 'Genoa', 'Italy', 'NIGHT'),
+('Port of Le Havre', 'Normandy', 'Le Havre', 'France', 'DAY'),
+('Port of Manila', 'Metro Manila', 'Manila', 'Philippines', 'NIGHT'),
+('Port of Busan', 'South Gyeongsang', 'Busan', 'South Korea', 'DAY'),
+('Port of Shanghai', 'Shanghai Municipality', 'Shanghai', 'China', 'NIGHT'),
+('Port of Hong Kong', 'Hong Kong', 'Hong Kong', 'China', 'DAY'),
+('Port of Antwerp-Bruges', 'Flanders', 'Zeebrugge', 'Belgium', 'NIGHT'),
+('Port of San Juan', 'Puerto Rico', 'San Juan', 'United States', 'DAY'),
+('Port of Guayaquil', 'Guayas', 'Guayaquil', 'Ecuador', 'NIGHT'),
+('Port of Callao', 'Lima Region', 'Callao', 'Peru', 'DAY'),
+('Port of Montevideo', 'Montevideo Department', 'Montevideo', 'Uruguay', 'NIGHT'),
+('Port of Tallinn', 'Harju County', 'Tallinn', 'Estonia', 'DAY'),
+('Port of Riga', 'Riga Region', 'Riga', 'Latvia', 'NIGHT'),
+('Port of Oslo', 'Oslo County', 'Oslo', 'Norway', 'DAY'),
+('Port of Gothenburg', 'Västra Götaland', 'Gothenburg', 'Sweden', 'NIGHT'),
+('Port of Alexandria', 'Alexandria Governorate', 'Alexandria', 'Egypt', 'DAY'),
+('Port of Izmir', 'Izmir Province', 'Izmir', 'Turkey', 'NIGHT');
 
 
 
 INSERT INTO ITINERARY (description) VALUES
-('Coastal route from Buenos Aires to Montevideo with onboard sailing activities.'),
-('Caribbean route including Miami, Bahamas, and Puerto Rico.'),
-('Transatlantic crossing from Barcelona to New York.'),
-('Norwegian fjords itinerary with stops in Bergen and Trondheim.'),
-('Mediterranean route visiting Naples, Athens, and Istanbul.'),
-('Asian itinerary from Yokohama to Shanghai with coastal excursions.'),
-('Commercial route from Santos to Rotterdam transporting containers.'),
-('Touristic route from Vancouver to Alaska.'),
-('Persian Gulf itinerary visiting Doha, Dubai, and Abu Dhabi.'),
-('North Sea route with stops in Hamburg, Oslo, and Copenhagen.'),
-('Ocean crossing from Cape Town to Melbourne.'),
-('Western Mediterranean itinerary: Marseille, Barcelona, and Valencia.'),
-('Pacific crossing from Tokyo to Los Angeles.'),
-('Historical itinerary across Black Sea ports including Odessa and Varna.'),
-('South American route between Valparaiso, Lima, and Guayaquil.'),
-('Scandinavian itinerary from Helsinki to Stockholm and Copenhagen.'),
-('South Atlantic crossing from Buenos Aires to Cape Town.'),
-('Touristic cruise through the Greek islands.'),
-('Commercial route from Casablanca to Lisbon and London.'),
-('Exploration itinerary through Patagonia: Ushuaia, Punta Arenas, and Puerto Natales.');
+('Commercial route from Shenzhen to Los Angeles transporting electronics and consumer goods.'),
+('Cargo route from Hamburg to New York focused on machinery and industrial equipment.'),
+('South American trade route from Buenos Aires to Santos carrying agricultural products.'),
+('Logistics route from Rotterdam to Singapore transporting mixed containers of technology and textiles.'),
+('Freight route from Shanghai to Hamburg with electronics and household appliances.'),
+('Commercial shipping line from Dubai to Mumbai transporting cleaning products and chemicals.'),
+('Cargo itinerary from Valparaiso to Callao focused on packaged food and beverages.'),
+('Atlantic trade route from Cape Town to Rotterdam with raw materials and manufactured goods.'),
+('Pacific cargo line from Vancouver to Yokohama transporting timber and paper products.'),
+('Commercial route from Santos to Miami with mixed merchandise and electronics.'),
+('Freight itinerary from Genoa to Alexandria transporting cleaning supplies and detergents.'),
+('Cargo shipping line from Singapore to Sydney with technology and industrial parts.'),
+('South Atlantic trade route from Montevideo to Lisbon carrying frozen food and textiles.'),
+('Commercial route from Casablanca to Marseille transporting household goods and cleaning products.'),
+('Cargo itinerary from Helsinki to Gdansk with machinery and construction materials.'),
+('Freight route from Durban to Dubai transporting chemicals and packaged consumer goods.'),
+('Commercial shipping line from Dublin to New York focused on pharmaceuticals and cleaning products.'),
+('Cargo route from Saint Petersburg to Rotterdam transporting electronics and industrial machinery.'),
+('South American logistics route from Guayaquil to Los Angeles with agricultural exports and cleaning products.'),
+('Commercial itinerary from Manila to Hong Kong transporting textiles, electronics, and packaged goods.');
 
 
 
@@ -182,7 +250,7 @@ INSERT INTO CREW_ASSIGNMENTS_TO_SHIPS (ship_id, crew_id, position_id, assignment
 (3, 13, 2, '2024-01-15', '2024-06-15'),
 (3, 14, 3, '2024-01-20', '2024-06-15'),
 (3, 15, 4, '2024-01-25', '2024-06-15'),
-(3, 16, 5, '2024-02-01', '2024-06-15'),
+(3, 16, 5, '2024-04-11', '2024-06-15'),
 (3, 17, 6, '2024-02-05', '2024-06-15'),
 (5, 8, 3, '2023-11-01', '2024-03-20'),
 (5, 18, 1, '2023-11-05', '2024-03-20'),
@@ -190,7 +258,7 @@ INSERT INTO CREW_ASSIGNMENTS_TO_SHIPS (ship_id, crew_id, position_id, assignment
 (5, 20, 4, '2023-11-15', '2024-03-20'),
 (5, 21, 5, '2023-11-20', '2024-03-20'),
 (5, 22, 6, '2023-11-25', '2024-03-20'),
-(7, 19, 2, '2024-02-05', '2024-12-31'),
+(7, 19, 2, '2024-03-21', '2024-12-31'), 
 (7, 23, 1, '2024-02-10', '2024-12-31'),
 (7, 24, 3, '2024-02-15', '2024-12-31'),
 (7, 25, 4, '2024-02-20', '2024-12-31'),
@@ -214,13 +282,13 @@ INSERT INTO CREW_ASSIGNMENTS_TO_SHIPS (ship_id, crew_id, position_id, assignment
 (15, 40, 3, '2024-01-15', '2024-08-01'),
 (15, 41, 4, '2024-01-20', '2024-08-01'),
 (15, 42, 5, '2024-01-25', '2024-08-01'),
-(20, 41, 7, '2024-03-10', NULL),
+(20, 41, 7, '2024-08-02', NULL), 
 (20, 43, 1, '2024-03-15', NULL),
 (20, 44, 2, '2024-03-20', NULL),
 (20, 45, 3, '2024-03-25', NULL),
 (20, 46, 4, '2024-03-30', NULL),
 (20, 47, 5, '2024-04-05', NULL),
-(9, 16, 8, '2024-05-15', '2024-09-15'),
+(9, 16, 8, '2024-06-16', '2024-09-15'), 
 (9, 48, 1, '2024-05-20', '2024-09-15'),
 (9, 49, 2, '2024-05-25', '2024-09-15'),
 (9, 50, 3, '2024-05-30', '2024-09-15'),
@@ -229,58 +297,71 @@ INSERT INTO CREW_ASSIGNMENTS_TO_SHIPS (ship_id, crew_id, position_id, assignment
 (11, 48, 2, '2023-12-30', '2024-04-10'),
 (11, 49, 3, '2024-01-05', '2024-04-10'),
 (11, 50, 4, '2024-01-10', '2024-04-10'),
-(11, 33, 5, '2024-01-15', '2024-04-10');
-
+(11, 33, 5, '2024-01-15', '2024-04-10'),
+(12, 51, 1, '2024-07-01', '2024-12-15'),
+(12, 52, 2, '2024-07-05', '2024-12-15'),
+(12, 53, 3, '2024-07-10', '2024-12-15'),
+(12, 54, 4, '2024-07-15', '2024-12-15'),
+(12, 55, 5, '2024-07-20', '2024-12-15'),
+(12, 56, 6, '2024-07-25', '2024-12-15'),
+(13, 57, 1, '2025-01-10', '2025-06-30'),
+(13, 58, 2, '2025-01-15', '2025-06-30'),
+(13, 59, 3, '2025-01-20', '2025-06-30'),
+(13, 60, 4, '2025-01-25', '2025-06-30'),
+(13, 61, 5, '2025-02-01', '2025-06-30'),
+(13, 62, 6, '2025-02-05', '2025-06-30'),
+(14, 63, 1, '2025-07-01', NULL),
+(14, 64, 2, '2025-07-05', NULL),
+(14, 65, 3, '2025-07-10', NULL),
+(14, 66, 4, '2025-07-15', NULL),
+(14, 67, 5, '2025-07-20', NULL),
+(14, 68, 6, '2025-07-25', NULL);
 
 
 INSERT INTO SHIPS_IN_ITINERARIES (ship_id, itinerary_id, voyage_start_date, voyage_end_date) VALUES
--- 2024
-(3, 1, '2024-01-10', '2024-01-20'),
-(5, 4, '2024-02-01', '2024-02-18'),
-(7, 7, '2024-03-05', '2024-03-25'),
-(10, 12, '2024-04-10', '2024-05-01'),
-(12, 6, '2024-01-15', '2024-01-30'),
-(18, 9, '2024-05-02', '2024-05-28'),
-(21, 15, '2024-06-10', '2024-06-30'),
-(25, 2, '2024-02-18', '2024-03-01'),
-(30, 18, '2024-07-01', '2024-07-20'),
-(34, 11, '2024-03-22', '2024-04-10');
--- 2025
-(3, 1, '2025-01-12', '2025-01-22'),
-(5, 4, '2025-02-03', '2025-02-20'),
-(7, 7, '2025-03-08', '2025-03-28'),
-(10, 12, '2025-04-15', '2025-05-05'),
-(12, 6, '2025-06-01', '2025-06-16'),
-(18, 9, '2025-07-05', '2025-07-30'),
-(21, 15, '2025-08-12', '2025-08-31'),
-(25, 2, '2025-09-03', '2025-09-15'),
-(30, 18, '2025-10-01', '2025-10-20'),
-(34, 11, '2025-11-10', '2025-11-30'),
--- 2026
-(3, 1, '2026-01-14', '2026-01-24'),
-(5, 4, '2026-02-05', '2026-02-22'),
-(7, 7, '2026-03-10', '2026-03-30'),
-(10, 12, '2026-04-16', '2026-05-06'),
-(12, 6, '2026-06-03', '2026-06-18'),
-(18, 9, '2026-07-07', '2026-07-31'),
-(21, 15, '2026-08-15', '2026-09-03'),
-(25, 2, '2026-09-05', '2026-09-17'),
-(30, 18, '2026-10-03', '2026-10-22'),
-(34, 11, '2026-11-12', '2026-12-02');
-
+(3, 1, '2024-01-10', '2024-02-05'),
+(5, 4, '2024-02-10', '2024-03-05'),
+(7, 7, '2024-03-15', '2024-04-10'),
+(10, 12, '2024-04-20', '2024-05-15'),
+(12, 6, '2024-06-01', '2024-06-25'),
+(18, 9, '2024-07-05', '2024-07-30'),
+(21, 15, '2024-08-12', '2024-09-05'),
+(25, 2, '2024-09-15', '2024-10-05'),
+(30, 18, '2024-10-20', '2024-11-15'),
+(34, 11, '2024-11-25', '2024-12-20'),
+(3, 1, '2025-01-12', '2025-02-08'),
+(5, 4, '2025-02-15', '2025-03-10'),
+(7, 7, '2025-03-20', '2025-04-15'),
+(10, 12, '2025-04-25', '2025-05-20'),
+(12, 6, '2025-06-05', '2025-06-30'),
+(18, 9, '2025-07-10', '2025-08-05'),
+(21, 15, '2025-08-20', '2025-09-10'),
+(25, 2, '2025-09-20', '2025-10-05'),
+(30, 18, '2025-10-15', '2025-11-05'),
+(34, 11, '2025-11-20', '2025-12-15'),
+(3, 1, '2026-01-14', '2026-02-10'),
+(5, 4, '2026-02-18', '2026-03-10'),
+(7, 7, '2026-03-22', '2026-04-15'),
+(10, 12, '2026-04-25', '2026-05-20'),
+(12, 6, '2026-06-07', '2026-06-30'),
+(18, 9, '2026-07-12', '2026-08-05'),
+(21, 15, '2026-08-22', '2026-09-12'),
+(25, 2, '2026-09-22', '2026-10-07'),
+(30, 18, '2026-10-17', '2026-11-05'),
+(34, 11, '2026-11-22', '2026-12-15');
 
 
 INSERT INTO HARBORS_IN_ITINERARIES (harbor_id, itinerary_id) VALUES
-(1, 1),
-(4, 1),
-(7, 3),
-(10, 4),
-(12, 6),
-(15, 7),
-(18, 9),
-(5, 12),
-(9, 15),
-(20, 18);
+(1, 1), (4, 1), (7, 1), -- Itinerario 1
+(10, 4), (12, 4), -- Itinerario 4
+(15, 7), (18, 7), (20, 7), -- Itinerario 7
+(5, 12), (9, 12), -- Itinerario 12
+(12, 6), (14, 6), -- Itinerario 6
+(18, 9), (19, 9), -- Itinerario 9
+(9, 15), (11, 15), -- Itinerario 15
+(20, 18), (21, 18), -- Itinerario 18
+(3, 2), (6, 2), -- Itinerario 2
+(8, 11), (13, 11), (16, 11); -- Itinerario 11
 
 
 -- Verification Of Elements

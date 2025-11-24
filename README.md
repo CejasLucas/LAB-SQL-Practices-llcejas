@@ -1,53 +1,53 @@
-# 🌐 Structured Query Language *(SQL)*
-Es un lenguaje de programación diseñado para gestionar y manipular bases de datos relacionales. 
-Su principal función es permitir la creación, modificación, eliminación y consulta de datos almacenados.
-Se utiliza ampliamente en sistemas de gestión de bases de datos ***DBMS*** como PostgreSQL, MySQL, Oracle Database, SQL Server y SQLite, entre otros.
+# 🛳️ **Maritime Logistics DB**
+Este repositorio reúne prácticas, modelos y scripts de SQL diseñados para aprender, reforzar y aplicar conceptos fundamentales de bases de datos relacionales.
+El objetivo es construir una base sólida que abarque desde la teoría básica hasta la implementación práctica en motores de bases de datos como MySQL, PostgreSQL o SQL Server.
+Aquí encontrarás:
+- Documentación teórica y modelos de análisis.
+- Scripts organizados por tipo de operación (DDL, DML, procedimientos, funciones, triggers).
+- Ejercicios prácticos para afianzar conocimientos.
+Este proyecto está pensado como una guía de estudio y referencia para estudiantes, desarrolladores y profesionales que deseen mejorar sus habilidades en SQL.
 
-## 🧑🏽‍💻 Antes de comenzar: ¿Qué necesitas para ejecutar SQL?
-
+##  Antes de comenzar: *¿Qué necesitas para ejecutar SQL?*
 Para poder ejecutar consultas SQL y gestionar bases de datos, necesitas configurar correctamente tanto el motor de base de datos (servidor) como la conexión con el cliente. Aquí te detallo los componentes esenciales:
 
-1. **🛢️ Motor de base de datos (Servidor)**
-    El motor es el software que gestiona los datos y procesa las instrucciones SQL. Ejemplos: MySQL Server, PostgreSQL, Microsoft SQL Server, Oracle Database, SQLite (versión ligera sin servidor). Debes:
-    
-    - Instalar el motor en un servidor o equipo local.
-    
-    - Crear una base de datos.
+### 1. 🛢️ Motor de base de datos (Servidor)
+El motor es el software que gestiona los datos y procesa las instrucciones SQL. Ejemplos: MySQL Server, PostgreSQL, Microsoft SQL Server, Oracle Database, SQLite (versión ligera sin servidor). Debes:
 
-    - Configurar puertos de acceso (por defecto, por ejemplo, el 3306 para MySQL o el 5432 para PostgreSQL).
+- Instalar el motor en un servidor o equipo local.
 
-    - Definir usuarios y contraseñas con los permisos adecuados.
+- Crear una base de datos.
 
+- Configurar puertos de acceso (por defecto, por ejemplo, el 3306 para MySQL o el 5432 para PostgreSQL).
 
-2. **🖥️ Cliente de conexión (Interfaz o entorno de trabajo)**
+- Definir usuarios y contraseñas con los permisos adecuados.
 
-    El cliente es la herramienta que utilizas para enviar consultas al motor. Puede ser:
+### 2. 🖥️ Interfaz o entorno de trabajo (Cliente de conexión)
+El cliente es la herramienta que utilizas para enviar consultas al motor. Puede ser:
 
-    - Command Line Interface (CLI) como PostgreSQL o MySQL.
+- Command Line Interface (CLI) como PostgreSQL o MySQL.
 
-    - Interfaz gráfica Herramientas (GUI) como DBeaver, MySQL Workbench, pgAdmin, Azure Data Studio, etc.
+- Interfaz gráfica Herramientas (GUI) como DBeaver, MySQL Workbench, pgAdmin, Azure Data Studio, etc.
 
-    - Lenguaje de programación a través de librerías o controladores (por ejemplo, mysql-connector para Python o JDBC para Java).
+- Lenguaje de programación a través de librerías o controladores (por ejemplo, mysql-connector para Python o JDBC para Java).
 
-3. **📶 Configuración de conexión**
+### 3. 📶 Configuración de conexión
+Debes establecer una conexión entre el cliente y el servidor especificando:
 
-    Debes establecer una conexión entre el cliente y el servidor especificando:
+- Host o dirección IP del servidor.
 
-    - Host o dirección IP del servidor.
+- Puerto del motor.
 
-    - Puerto del motor.
+- Nombre de usuario y contraseña.
 
-    - Nombre de usuario y contraseña.
+- Nombre de la base de datos.
 
-    - Nombre de la base de datos.
+### 4. 🛡️ Requisitos adicionales
 
-4. **🛡️ Requisitos adicionales**
+- Tener drivers o controladores instalados si accedes desde un lenguaje de programación.
 
-    - Tener drivers o controladores instalados si accedes desde un lenguaje de programación.
+- Asegurar que el firewall o la red permitan la comunicación entre cliente y servidor.
 
-    - Asegurar que el firewall o la red permitan la comunicación entre cliente y servidor.
-
-    - Mantener actualizados los parches de seguridad del motor de base de datos.
+- Mantener actualizados los parches de seguridad del motor de base de datos.
 
 #### ✅ En resumen:
 
@@ -55,123 +55,112 @@ Para usar SQL necesitas un motor donde se almacenen y gestionen los datos, y un 
 
 <br>
 
-# 📓 Introducción general
-
-En una base de datos relacional, el lenguaje SQL (Structured Query Language) no solo sirve para consultar información, sino que también permite definir, manipular, controlar y asegurar los datos y los objetos que los almacenan.
-Para ello, SQL se divide en cuatro sublenguajes principales, cada uno con un propósito específico:
-
-###  1. Data Definition Language *(DDL)*
-Se usa para **definir o modificar la estructura** de los objetos de la base de datos: tablas, columnas, vistas, índices, etc.
-
-| Comando    | Descripción 
-|------------|---------------------------
-| `CREATE`   | Crea objetos nuevos (tabla, vista, base de datos, etc.) 
-| `ALTER`    | Modifica la estructura de un objeto existente 
-| `DROP`     | Elimina un objeto (tabla, vista, etc.) 
-| `TRUNCATE` | Borra todos los datos de una tabla, pero mantiene su estructura 
-<br>
+# 📦 Clonar el repositorio desde GitHub
+Para comenzar a trabajar con este proyecto, necesitas clonar el repositorio en tu entorno local.
+Asegúrate de cumplir con los siguientes requisitos previos: Tener instalado Git en tu sistema. Y contar con una cuenta en GitHub, lo que te permitirá mantener tu trabajo sincronizado con el repositorio remoto en la nube. De esta manera podrás descargar el código, realizar modificaciones y subir tus cambios de forma ordenada y segura.
 
 
+### 🪪 Clonar repositorio y traer los últimos cambios
+``` bash 
+    # Clonar repo
+    git clone https://github.com/CejasLucas/sql-practices-llcejas.git
 
-### 2. Data Manipulation Language *(DML)*
-Se usa para **trabajar con los datos** dentro de las tablas: insertar, consultar, modificar o eliminar registros.
-Esto es lo que normalmente haces día a día con la información.
+    # Entrar al directorio (observa que el nombre es en minúsculas)
+    cd sql-practices-llcejas
 
-| Comando    | Descripción 
-|------------|----------------------------
-| `INSERT`   | Inserta nuevos registros 
-| `SELECT`   | Consulta datos 
-| `UPDATE`   | Actualiza datos existentes 
-| `DELETE`   | Elimina datos 
-<br>
+    # Cambiar a la rama deseada (si ya existe en remoto)
+    git checkout branch_name
+
+    # Traer los últimos cambios desde remoto
+    git pull origin branch_name
+
+    # [NOTA] Si la rama no existe localmente, puedes crearla y vincularla así
+    git checkout -b branch_name origin/branch_name
+``` 
+
+### 🧑🏽‍💻 Subir cambios a la rama correspondiente del repositorio remoto
+``` bash 
+    # Agregar cambios al staging
+    git add .
+
+    # Verificar qué se va a commitear
+    git status
+
+    # Crear commit
+    git commit -m "Mensaje descriptivo de los cambios"
+
+    # Enviar la rama al remoto
+    git push origin branch_name
+
+    # Ver último commit realizado
+    git log -1
+``` 
 
 
+# 🗂️ Estructura del proyecto
+La estructura del proyecto permite trabajar con SQL de forma ordenada y progresiva. En docs/ se concentra toda la información previa al desarrollo (teoría, requisitos y modelos), lo que asegura un diseño correcto antes de escribir código. En scripts/ se separan claramente los archivos según su propósito: DDL para crear y modificar la estructura, DML para manipular datos y featured para funciones avanzadas. Esta organización facilita entender cada etapa del proceso y ejecutar los scripts en el orden adecuado, manteniendo el proyecto claro y fácil de mantener.
 
-### 3. Data Control Language *(DCL)*
-Se usa para **gestionar los permisos y accesos** de los usuarios dentro de la base de datos.
+``` json
+    SQL-PRACTICES-LLCEJAS/
+    ├── docs/
+    │   ├── 0_basic theory about SQL.md
+    │   ├── 1_requirements analysis model.pdf
+    │   ├── 2_entity relationship model.pdf
+    │   ├── 3_physical model.pdf
+    │   ├── 4_tables model.md
+    │   └── 5_practice exercises.md
+    │
+    ├── scripts/
+    │   ├── ddl/
+    │   │   ├── 0_create/
+    |   │   │   ├── 01_create database.sql
+    |   │   │   ├── 02_create table.sql
+    |   │   │   ├── 03_create index.sql
+    |   │   │   └── 04_create view.sql
+    │   │   ├── 1_alter table.sql
+    │   │   ├── 2_truncate table.sql
+    │   │   └── 3_drop database
+    │   ├── dml/
+    │   |   ├── 0_select/
+    |   |   │   ├── 01_select.sql
+    |   |   │   ├── 02_distinct.sql
+    |   |   │   ├── 03_select as.sql
+    |   |   │   ├── 04_count.sql
+    |   |   │   ├── 05_sum.sql
+    |   |   │   ├── 06_avg.sql
+    |   |   │   ├── 07_max.sql
+    |   |   │   ├── 08_min.sql
+    |   |   │   ├── 09_join.sql
+    |   |   │   ├── 10_group by.sql
+    |   |   │   ├── 11_where.sql
+    |   |   │   ├── 12_having.sql
+    |   |   │   ├── 13_order by.sql
+    |   |   │   ├── 14_limit.sql
+    |   |   │   └── 15_offset.sql
+    │   |   ├── 1_insert.sql
+    │   |   ├── 2_update.sql
+    │   |   └── 3_delete.sql
+    │   └── featured/
+    │       ├── 1_procedures.sql
+    │       ├── 2_functions.sql
+    │       └── 3_triggers.sql
+    │
+    └── README.md
+``` 
 
-| Comando   | Descripción 
-|-----------|------------------------------------
-| `GRANT`   | Concede permisos a un usuario
-| `REVOKE`  | Revoca (quita) permisos a un usuario
-<br>
+## 🧩 Paso a paso de la construcción de una base de datos
+### 0. Crear la base de datos
+Aquí se define el nombre de la base de datos y se selecciona para trabajar. [CREATE DATABASE](scripts/ddl/0_create/01_create%20database.sql)
+    
+### 1. Crear las tablas correspondientes
+Se crean las estructuras que almacenarán la información: columnas, tipos de datos, claves primarias y foráneas. [CREATE TABLE](scripts/ddl/0_create/02_create%20table.sql)
 
+### 2. Insertar los datos necesarios
+Se cargan los registros iniciales para luego poder realizar consultas. [INSERT INTO](scripts/dml/1_insert.sql)
 
-### 4. Transaction Control Language *(TCL)*
-Se usa para **manejar transacciones**, es decir, grupos de operaciones que deben ejecutarse todas o revertirse si ocurre un error.
+### 3. Realizar consultas (queries)
+Antes de realizar los ejercicios, leer la teoria. [THEORY](docs/0_basic%20theory%20about%20SQL.md) | [EXERCISES](docs/5_practices%20exercises.md)
 
-| Comando	    | Descripción 
-|---------------|-------------
-| `COMMIT`	    | Guarda los cambios definitivamente
-| `ROLLBACK`	| Revierte los cambios si hay un error
-| `SAVEPOINT`	| Crea un punto de guardado dentro de una transacción
-<br>
-
-# 🗄️ Estructura de una Query en SQL Server
-Las consultas SQL deben seguir un orden específico porque el motor de base de datos interpreta y ejecuta cada cláusula en una secuencia lógica. Esto asegura que cada parte de la consulta tenga los datos necesarios generados por la anterior.
-
-### 🔗 Esquema de una consulta (Orden Sintáctico)  
- El orden que debes seguir al escribir una consulta SQL sera la siguiente.
-
-```sql
-    SELECT 
-        DISTINCT
-        AS ('alias')
-        COUNT(), SUM(), AVG(), MAX(), MIN()
-    FROM 
-        'TableName'
-    JOIN 
-        INNER JOIN
-        LEFT JOIN
-        RIGHT JOIN
-        FULL JOIN
-        ON ('Condition')
-    WHERE 
-        =  
-        > 
-        < 
-        >= 
-        <=
-        <> 
-        IN
-        LIKE
-        BETWEEN
-        AND / OR / NOT
-        IS NULL / IS NOT NULL
-    GROUP BY 
-        'Columns'
-    HAVING 
-        'Condition on aggregations' (e.g., HAVING COUNT(*) > 5)
-    ORDER BY 
-        'Columns'
-        ASC
-        DESC
-    LIMIT 
-        'Number of rows to return'
-    OFFSET 
-        'Number of rows to skip'
-```
-
-### 🔩 Ejecución interna de una consulta (Orden Lógico)
-El motor SQL procesa las cláusulas en un orden diferente al que se escriben. Aunque SELECT aparece primero en el código, no es lo primero que se ejecuta; está al inicio solo por la gramática del lenguaje.
-
-- **FROM / JOIN** → Se seleccionan las tablas y se combinan los datos.
-
--  **WHERE** → Se filtran filas antes de agrupar.
-
-- **GROUP BY** → Se agrupan las filas según columnas.
-
-- **HAVING** → Se filtran los grupos resultantes.
-
-- **SELECT** → Se eligen las columnas o agregaciones a mostrar.
-
-- **DISTINCT** → Se eliminan duplicados si se solicita.
-
-- **ORDER BY** → Se ordenan los resultados.
-
-- **LIMIT / OFFSET** → Se limita la cantidad de filas mostradas.
-
-Cada cláusula necesita que la anterior ya haya generado algo sobre lo que trabajar. Por eso no puedes, por ejemplo, usar un alias definido en SELECT dentro del WHERE, ya que el WHERE se ejecuta antes del SELECT.
 
 <br>
 
