@@ -1,28 +1,35 @@
-# 🛳️ **Maritime Logistics DB**
+# 🚢 **Maritime Logistics DB**
 Este repositorio reúne prácticas, modelos y scripts de SQL diseñados para aprender, reforzar y aplicar conceptos fundamentales de bases de datos relacionales.
 El objetivo es construir una base sólida que abarque desde la teoría básica hasta la implementación práctica en motores de bases de datos como MySQL, PostgreSQL o SQL Server.
 Aquí encontrarás:
 - Documentación teórica y modelos de análisis.
+
 - Scripts organizados por tipo de operación (DDL, DML, procedimientos, funciones, triggers).
+
 - Ejercicios prácticos para afianzar conocimientos.
+
 Este proyecto está pensado como una guía de estudio y referencia para estudiantes, desarrolladores y profesionales que deseen mejorar sus habilidades en SQL.
 
-##  Antes de comenzar: *¿Qué necesitas para ejecutar SQL?*
+## Antes de comenzar: *¿Qué necesitas para ejecutar SQL?*
 Para poder ejecutar consultas SQL y gestionar bases de datos, necesitas configurar correctamente tanto el motor de base de datos (servidor) como la conexión con el cliente. Aquí te detallo los componentes esenciales:
 
-### 1. 🛢️ Motor de base de datos (Servidor)
+### 🛢️ 1. Motor de base de datos (Servidor)
 El motor es el software que gestiona los datos y procesa las instrucciones SQL. Ejemplos: MySQL Server, PostgreSQL, Microsoft SQL Server, Oracle Database, SQLite (versión ligera sin servidor). Debes:
 
 - Instalar el motor en un servidor o equipo local.
 
 - Crear una base de datos.
 
-- Configurar puertos de acceso (por defecto, por ejemplo, el 3306 para MySQL o el 5432 para PostgreSQL).
-
 - Definir usuarios y contraseñas con los permisos adecuados.
 
+- Configurar puertos de acceso (por defecto, por ejemplo, el 3306 para MySQL o el 5432 para PostgreSQL).
 
-### 2. 🖥️ Interfaz o entorno de trabajo (Cliente de conexión)
+- Tambien tenes una opcion alternativa usando Docker 
+    > 📌 Guía completa y detallada del proceso:
+    [SQL with Docker](<docs/0_Install DB motor with Docker.md>)
+
+
+### 🖥️ 2. Interfaz o entorno de trabajo (Cliente de conexión)
 El cliente es la herramienta que utilizas para enviar consultas al motor. Puede ser:
 
 - Command Line Interface (CLI) como PostgreSQL o MySQL.
@@ -31,7 +38,7 @@ El cliente es la herramienta que utilizas para enviar consultas al motor. Puede 
 
 - Lenguaje de programación a través de librerías o controladores (por ejemplo, mysql-connector para Python o JDBC para Java).
 
-### 3. 📶 Configuración de conexión
+### 🔗 3. Configuración de conexión
 Debes establecer una conexión entre el cliente y el servidor especificando:
 
 - Host o dirección IP del servidor.
@@ -42,7 +49,7 @@ Debes establecer una conexión entre el cliente y el servidor especificando:
 
 - Nombre de la base de datos.
 
-### 4. 🛡️ Requisitos adicionales
+### 🛡️ 4. Requisitos adicionales
 
 - Tener drivers o controladores instalados si accedes desde un lenguaje de programación.
 
@@ -50,36 +57,20 @@ Debes establecer una conexión entre el cliente y el servidor especificando:
 
 - Mantener actualizados los parches de seguridad del motor de base de datos.
 
-#### ✅ En resumen:
+#### En resumen:
 
 Para usar SQL necesitas un motor donde se almacenen y gestionen los datos, y un cliente desde el cual puedas ejecutar consultas y administrar la base. Una correcta configuración de red, credenciales y controladores te permitirá trabajar eficientemente con tu base de datos.
 
-## 🐋 Opción alternativa: Ejecutar SQL Server usando Docker
-Si no deseas instalar el motor SQL directamente en tu sistema, puedes ejecutarlo dentro de un contenedor Docker. Esta opción es ideal para desarrollo porque:
-
-- Evita instalaciones pesadas del motor SQL en tu sistema.
-
-- Permite probar diferentes versiones rápidamente.
-
-- Mantiene tu PC limpia y sin servicios residuales.
-
-- Ofrece un entorno aislado para practicar SQL.
-
-- Es fácil de crear, borrar y volver a crear cuando lo necesites.
-
-Para interactuar con el motor de base de datos (ya sea instalado localmente o ejecutándose en Docker), utilizaremos Visual Studio Code como cliente SQL, junto con su extensión oficial SQL Server (mssql). Esta herramienta permite conectarse, ejecutar queries, ver tablas, administrar conexiones y trabajar cómodamente sin usar SQL Management Studio.
-
-📌 Guía completa y detallada del proceso:
-[SQL with Docker](<docs/0_Install DB motor with Docker.md>)
-
 <br>
+
+
 
 # 📦 Clonar el repositorio desde GitHub
 Para comenzar a trabajar con este proyecto, necesitas clonar el repositorio en tu entorno local.
 Asegúrate de cumplir con los siguientes requisitos previos: Tener instalado Git en tu sistema. Y contar con una cuenta en GitHub, lo que te permitirá mantener tu trabajo sincronizado con el repositorio remoto en la nube. De esta manera podrás descargar el código, realizar modificaciones y subir tus cambios de forma ordenada y segura.
 
 
-### 🪪 Clonar repositorio y traer los últimos cambios
+### Clonar repositorio y traer los últimos cambios
 ``` bash 
     # Clonar repo
     git clone https://github.com/CejasLucas/sql-practices-llcejas.git
@@ -97,7 +88,7 @@ Asegúrate de cumplir con los siguientes requisitos previos: Tener instalado Git
     git checkout -b branch_name origin/branch_name
 ``` 
 
-### 🧑🏽‍💻 Subir cambios a la rama correspondiente del repositorio remoto
+### Subir cambios a la rama correspondiente del repositorio remoto
 ``` bash 
     # Agregar cambios al staging
     git add .
@@ -115,6 +106,7 @@ Asegúrate de cumplir con los siguientes requisitos previos: Tener instalado Git
     git log -1
 ``` 
 
+<br>
 
 # 🗂️ Estructura del proyecto
 La estructura del proyecto permite trabajar con SQL de forma ordenada y progresiva. En docs/ se concentra toda la información previa al desarrollo (teoría, requisitos y modelos), lo que asegura un diseño correcto antes de escribir código. En scripts/ se separan claramente los archivos según su propósito: DDL para crear y modificar la estructura, DML para manipular datos y featured para funciones avanzadas. Esta organización facilita entender cada etapa del proceso y ejecutar los scripts en el orden adecuado, manteniendo el proyecto claro y fácil de mantener.
@@ -167,19 +159,28 @@ La estructura del proyecto permite trabajar con SQL de forma ordenada y progresi
     └── README.md
 ``` 
 
-## 🧩 Paso a paso de la construcción de una base de datos
-### 0. Crear la base de datos
-Aquí se define el nombre de la base de datos y se selecciona para trabajar. [CREATE DATABASE](scripts/ddl/0_create/01_create%20database.sql)
-    
-### 1. Crear las tablas correspondientes
-Se crean las estructuras que almacenarán la información: columnas, tipos de datos, claves primarias y foráneas. [CREATE TABLE](scripts/ddl/0_create/02_create%20table.sql)
+<br>
 
-### 2. Insertar los datos necesarios
-Se cargan los registros iniciales para luego poder realizar consultas. [INSERT INTO](scripts/dml/1_insert.sql)
+# 🧩 Construcción de una base de datos
+En esta sección comenzamos con la parte práctica: la creación de nuestra base de datos de logística marítima. Aquí es donde la teoría se convierte en acción. Siguiendo un enfoque paso a paso, aprenderás a diseñar, construir y poblar tu base de datos, de manera que quede lista para consultas, análisis y prácticas avanzadas de SQL. El proceso se organiza en cuatro etapas fundamentales:
 
-### 3. Realizar consultas (queries)
-Antes de realizar los ejercicios, leer la teoria. [THEORY](docs/0_basic%20theory%20about%20SQL.md) | [EXERCISES](docs/5_practice%20exercises.md)
+> **0. Crear la base de datos:**
+    Definimos el nombre y las características iniciales del sistema. 
+[CREATE DATABASE](<scripts/ddl/0_create/01_create database.sql>)
 
+> **1. Diseñar y crear las tablas:**
+    Se estructuran las entidades, columnas, tipos de datos, y las relaciones entre ellas mediante claves primarias y foráneas.
+[CREATE TABLE](<scripts/ddl/0_create/02_create table.sql>)
+
+> **2. Insertar los datos iniciales:**
+    Se cargan registros de ejemplo para poder realizar consultas y prácticas de forma inmediata.
+[INSERT INTO](<scripts/dml/1_insert.sql>)
+
+> **3. Realizar consultas y ejercicios prácticos:**
+    Una vez cargados los datos, es momento de explorar, analizar y manipular la información mediante queries, reforzando los conceptos aprendidos en la teoría.
+[THEORY](<docs/1_Basic theory about SQL.md>) | [EXERCISES](<docs/2_Practice exercises.md>)
+
+Con esta metodología, no solo construyes una base de datos funcional, sino que también consolidás una forma de trabajar ordenada y profesional, aplicable a cualquier proyecto SQL.
 
 <br>
 

@@ -53,8 +53,8 @@ Se usa para **manejar transacciones**, es decir, grupos de operaciones que deben
 # 🗄️ Estructura de una Query en SQL Server
 Las consultas SQL deben seguir un orden específico porque el motor de base de datos interpreta y ejecuta cada cláusula en una secuencia lógica. Esto asegura que cada parte de la consulta tenga los datos necesarios generados por la anterior.
 
-### 🔗 Esquema de una consulta (Orden Sintáctico)  
- El orden que debes seguir al escribir una consulta SQL sera la siguiente.
+### Esquema de una consulta   
+ El orden sintáctico que debes seguir al escribir una consulta SQL sera la siguiente.
 
 ```sql
     SELECT 
@@ -95,8 +95,8 @@ Las consultas SQL deben seguir un orden específico porque el motor de base de d
         'Number of rows to skip'
 ```
 
-### 🔩 Ejecución interna de una consulta (Orden Lógico)
-El motor SQL procesa las cláusulas en un orden diferente al que se escriben. Aunque SELECT aparece primero en el código, no es lo primero que se ejecuta; está al inicio solo por la gramática del lenguaje.
+### Ejecución interna de una consulta 
+El motor SQL (Orden Lógico) procesa las cláusulas en un orden diferente al que se escriben. Aunque SELECT aparece primero en el código, no es lo primero que se ejecuta; está al inicio solo por la gramática del lenguaje.
 
 - **FROM / JOIN** → Se seleccionan las tablas y se combinan los datos.
 
@@ -117,3 +117,15 @@ El motor SQL procesa las cláusulas en un orden diferente al que se escriben. Au
 Cada cláusula necesita que la anterior ya haya generado algo sobre lo que trabajar. Por eso no puedes, por ejemplo, usar un alias definido en SELECT dentro del WHERE, ya que el WHERE se ejecuta antes del SELECT.
 
 <br>
+
+
+## 📌 Notas adicionales sobre SQL
+> Es un estándar, pero cada motor implementa extensiones propias.
+
+> SQL es case-insensitive, aunque los valores almacenados sí pueden distinguir mayúsculas/minúsculas.
+
+> Para consultas complejas, los planes de ejecución son clave para entender el rendimiento real.
+
+> SQL se complementa con conceptos como normalización, relaciones, claves primarias, claves foráneas y restricciones.
+
+> Las bases de datos suelen utilizar índices para acelerar consultas; sin embargo, abusar de ellos afecta el rendimiento en inserciones y actualizaciones.
