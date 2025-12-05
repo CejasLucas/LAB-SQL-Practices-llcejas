@@ -1,4 +1,8 @@
-# 🚢 **Maritime Logistics DB**
+# Administración de Bases de Datos (DBA)
+![SQL Server](https://img.shields.io/badge/SQL%20Server-Database-red?logo=microsoftsqlserver)
+![Status](https://img.shields.io/badge/status-en%20desarrollo-yellow)
+
+
 Este repositorio reúne prácticas, modelos y scripts de SQL diseñados para aprender, reforzar y aplicar conceptos fundamentales de bases de datos relacionales.
 El objetivo es construir una base sólida que abarque desde la teoría básica hasta la implementación práctica en motores de bases de datos como MySQL, PostgreSQL o SQL Server.
 Aquí encontrarás:
@@ -65,12 +69,12 @@ Para usar SQL necesitas un motor donde se almacenen y gestionen los datos, y un 
 
 
 
-# 📦 Clonar el repositorio desde GitHub
+# 📦 Clonación del proyecto desde GitHub
 Para comenzar a trabajar con este proyecto, necesitas clonar el repositorio en tu entorno local.
 Asegúrate de cumplir con los siguientes requisitos previos: Tener instalado Git en tu sistema. Y contar con una cuenta en GitHub, lo que te permitirá mantener tu trabajo sincronizado con el repositorio remoto en la nube. De esta manera podrás descargar el código, realizar modificaciones y subir tus cambios de forma ordenada y segura.
 
 
-### Clonar repositorio y traer los últimos cambios
+### Obtener el repositorio y sincronizar actualizaciones
 ``` bash 
     # Clonar repo
     git clone https://github.com/CejasLucas/sql-practices-llcejas.git
@@ -88,7 +92,7 @@ Asegúrate de cumplir con los siguientes requisitos previos: Tener instalado Git
     git checkout -b branch_name origin/branch_name
 ``` 
 
-### Subir cambios a la rama correspondiente del repositorio remoto
+### Subir commits a la rama del repositorio remoto
 ``` bash 
     # Agregar cambios al staging
     git add .
@@ -161,7 +165,7 @@ La estructura del proyecto permite trabajar con SQL de forma ordenada y progresi
 
 <br>
 
-# 🧩 Construcción de una base de datos
+# 🧮 Construcción de una base de datos
 En esta sección comenzamos con la parte práctica: la creación de nuestra base de datos de logística marítima. Aquí es donde la teoría se convierte en acción. Siguiendo un enfoque paso a paso, aprenderás a diseñar, construir y poblar tu base de datos, de manera que quede lista para consultas, análisis y prácticas avanzadas de SQL. El proceso se organiza en cuatro etapas fundamentales:
 
 > **0. Crear la base de datos:**
@@ -184,9 +188,7 @@ Con esta metodología, no solo construyes una base de datos funcional, sino que 
 
 <br>
 
-# 🔚 Conclusión y Próximos Pasos
+# 🔜 Conclusión y Próximos Pasos
+Este repositorio constituye una base sólida de conocimientos en SQL y administración de bases de datos, recopilando principios y conceptos esenciales de sistemas relacionales. 
 
-Este repositorio representa el inicio de una base sólida de conocimiento técnico en SQL, fundamental para mi desarrollo profesional en el ámbito de las bases de datos. Aquí recopilo los principios y conceptos esenciales que sustentan el trabajo diario con sistemas relacionales, ofreciendo una guía clara y estructurada para futuras consultas.
-
-Seguiré ampliando este espacio con temas más avanzados: optimización de consultas, análisis de planes de ejecución, estrategias de indexación, seguridad, y mejores prácticas orientadas al rendimiento y la integridad de los datos.
-Mi objetivo es convertir este repositorio en una referencia práctica y en evolución constante, útil tanto para proyectos personales como para entornos profesionales.
+Se continuará ampliando con temas avanzados como optimización de consultas, indexación, seguridad y buenas prácticas, buscando convertirlo en una referencia práctica y en constante evolución.
