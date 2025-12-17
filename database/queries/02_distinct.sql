@@ -1,8 +1,9 @@
-USE MaritimeLogisticsDB; -- Verficar la conexión
-GO
+-- 0. Comprobar la conexion con la base de datos.
+USE MaritimeLogisticsDB; GO
 
-SELECT name AS Tabla, create_date AS FechaCreacion
-FROM sys.tables ORDER BY name;
+SELECT name AS Tabla, create_date AS FechaCreacion FROM sys.tables ORDER BY name;
+
+
 
 -- 1. Obtener las nacionalidades �nicas de los tripulantes.  
 SELECT DISTINCT nationality FROM CREW_MEMBER ORDER BY nationality;

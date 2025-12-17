@@ -1,8 +1,7 @@
-SELECT name AS Tabla, create_date AS FechaCreacion FROM sys.tables ORDER BY name;
+-- 0. Comprobar la conexion con la base de datos.
+USE MaritimeLogisticsDB; GO
 
--- Verficar la conexión
-USE MaritimeLogisticsDB; 
-GO 
+SELECT name AS Tabla, create_date AS FechaCreacion FROM sys.tables ORDER BY name;
 
 
 -- 1. Calcular la edad promedio de los tripulantes.  

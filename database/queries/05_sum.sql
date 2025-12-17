@@ -1,8 +1,8 @@
+-- 0. Comprobar la conexion con la base de datos.
+USE MaritimeLogisticsDB; GO
+
 SELECT name AS Tabla, create_date AS FechaCreacion FROM sys.tables ORDER BY name;
 
--- Verficar la conexión
-USE MaritimeLogisticsDB; 
-GO 
 
 -- 1. Sumar la cantidad total de días de viaje de cada barco.  
 SELECT 

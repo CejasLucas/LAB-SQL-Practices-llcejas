@@ -113,49 +113,58 @@ Asegúrate de cumplir con los siguientes requisitos previos: Tener instalado Git
 <br>
 
 # 🗂️ Estructura del proyecto
-La estructura del proyecto permite trabajar con SQL de forma ordenada y progresiva. En docs/ se concentra toda la información previa al desarrollo (teoría, requisitos y modelos), lo que asegura un diseño correcto antes de escribir código. En scripts/ se separan claramente los archivos según su propósito: DDL para crear y modificar la estructura, DML para manipular datos y featured para funciones avanzadas. Esta organización facilita entender cada etapa del proceso y ejecutar los scripts en el orden adecuado, manteniendo el proyecto claro y fácil de mantener.
+La estructura del proyecto está diseñada para facilitar el aprendizaje progresivo y el trabajo ordenado con SQL, siguiendo una separación clara de responsabilidades.
+El directorio **docs/** centraliza toda la información previa al desarrollo —teoría, requisitos, guías y material de apoyo— lo que permite comprender y planificar correctamente antes de escribir código.
+
+Por su parte, el directorio database/ contiene los scripts SQL organizados según su propósito y tipo de operación:
+
+- **schema/:** incluye scripts de definición y modificación de la estructura de la base de datos (creación, alteración y eliminación de objetos principales).
+
+- **scripts/:** agrupa las operaciones de manipulación de datos, como inserciones, actualizaciones y eliminaciones, utilizadas para poblar y mantener la información.
+
+- **queries/:** contiene consultas orientadas a la lectura, análisis y práctica de SQL, incluyendo filtros, agregaciones, joins y subconsultas.
+
+- **objects/:** concentra los objetos avanzados de base de datos, como índices, triggers, vistas, funciones y procedimientos almacenados, fundamentales para optimización, automatización y lógica de negocio.
+
+Esta organización permite comprender fácilmente cada etapa del ciclo de vida de una base de datos y ejecutar los scripts en el orden adecuado, manteniendo el proyecto claro, escalable y fácil de mantener tanto para estudio como para referencia profesional.
 
 ``` bash
     SQL-PRACTICES-LLCEJAS/
     ├── database/
-    │   ├── core/
-    │   │   ├── 0_create elements/
-    │   │   │   ├── 01_create main tables/
-    │   │   │   ├── 02_create link tables/
-    │   │   │   └── 00_create database.sql
-    │   │   ├── 1_alter table.sql
-    │   │   ├── 2_truncate table.sql
-    │   │   └── 3_drop database.sql
+    │   ├── objects/
+    │   │   ├── 01_indexes.sql
+    │   │   ├── 02_triggers.sql
+    │   │   ├── 03_views.sql
+    │   │   ├── 04_functions.sql
+    │   │   └── 05_procedures.sql
+    │   │    
+    │   ├── queries/
+    │   │   ├── 01_select.sql
+    │   │   ├── 02_distinct.sql
+    │   │   ├── 03_select as.sql
+    │   │   ├── 04_count.sql
+    │   │   ├── 05_sum.sql
+    │   │   ├── 06_avg.sql
+    │   │   ├── 07_max.sql
+    │   │   ├── 08_min.sql
+    │   │   ├── 09_join.sql
+    │   │   ├── 10_group by.sql
+    │   │   ├── 11_where.sql
+    │   │   ├── 12_having.sql
+    │   │   ├── 13_order by.sql
+    │   │   ├── 14_limit.sql
+    │   │   └── 15_offset.sql
     │   │
-    │   ├── extensions/
-    │   │   ├── 0_index.sql
-    │   │   ├── 1_trigger.sql
-    │   │   ├── 2_procedure.sql
-    │   │   ├── 3_view.sql
-    │   │   └── 4_function.sql
+    │   ├── schema/
+    │   │   ├── create database/
+    │   │   ├── alter table.sql
+    │   │   ├── drop database.sql
+    │   │   └── truncate table.sql
     │   │    
     │   └── scripts/
-    │       ├── 0_insert/
-    │       │   ├── 01_insert main tables/ 
-    │       │   └── 02_insert link tables/
-    │       ├── 1_select/
-    │       │   ├── 01_select.sql
-    │       │   ├── 02_distinct.sql
-    │       │   ├── 03_select as.sql
-    │       │   ├── 04_count.sql
-    │       │   ├── 05_sum.sql
-    │       │   ├── 06_avg.sql
-    │       │   ├── 07_max.sql
-    │       │   ├── 08_min.sql
-    │       │   ├── 09_join.sql
-    │       │   ├── 10_group by.sql
-    │       │   ├── 11_where.sql
-    │       │   ├── 12_having.sql
-    │       │   ├── 13_order by.sql
-    │       │   ├── 14_limit.sql
-    │       │   └── 15_offset.sql
-    │       ├── 2_update.sql
-    │       └── 3_delete.sql
+    │       ├── insert into/
+    │       ├── delete.sql
+    │       └── update.sql
     │
     ├── docs/
     │   ├── img/
@@ -172,18 +181,15 @@ En esta sección comenzamos con la parte práctica: la creación de nuestra base
 
 > **0. Crear la base de datos:**
     Definimos el nombre y las características iniciales del sistema. 
-[CREATE DATABASE](<database/core/0_create elements/00_create database.sql>)
+[CREATE DATABASE](<database/schema/create database/00_create database.sql>)
 
 > **1. Diseñar y crear las tablas:**
     Se estructuran las entidades, columnas, tipos de datos, y las relaciones entre ellas mediante claves primarias y foráneas.
-[CREATE MAIN TABLES](<database/core/0_create elements/01_create main tables/>)
-| [CREATE LINK TABLES](<database/core/0_create elements/02_create link tables/>)
-
+[CREATE TABLES](<database/schema/>)
 
 > **2. Insertar los datos iniciales:**
     Se cargan registros de ejemplo para poder realizar consultas y prácticas de forma inmediata.
-[INSERT MAIN TABLES](<database/scripts/0_insert/01_insert main tables/>) | 
-[INSERT LINK TABLES](<database/scripts/0_insert/02_insert link tables/>)
+[INSERT INTO](<database/scripts/insert into/>) 
 
 > **3. Realizar consultas y ejercicios prácticos:**
     Una vez cargados los datos, es momento de explorar, analizar y manipular la información mediante queries, reforzando los conceptos aprendidos en la teoría.

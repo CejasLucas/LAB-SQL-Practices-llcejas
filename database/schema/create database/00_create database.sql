@@ -1,5 +1,5 @@
 /* ===============================================
-  📦 Create DATABASE
+               Create DATABASE
 ================================================*/
 CREATE DATABASE MaritimeLogisticsDB;
 GO
