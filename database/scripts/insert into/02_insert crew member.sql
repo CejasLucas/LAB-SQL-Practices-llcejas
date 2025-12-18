@@ -103,3 +103,5 @@ INSERT INTO CREW_MEMBER (first_name, last_name, email, passport_number, home_cit
 ('Adriana', 'Costa', 'adriana.costa@gmail.com', 'BR5521109', 'Salvador', 'Brazil', '1988-01-15', '2015-09-19'),
 ('Lucas', 'Cejas', 'llcejas@gmail.com', 'AR8722011', 'San Martin', 'Argentina', '2002-06-18', '2021-06-01'),
 ('Brisa', 'Diaz', 'ba.diaz@hotmail.com', 'BR5512234', 'Santos', 'Brazil', '2003-01-10', '2023-03-12');
+
+SELECT * FROM CREW_MEMBER

@@ -1,4 +1,3 @@
-
 -- HARBORS_IN_ITINERARIES: Relaciona los puertos que forman parte de un itinerario determinado.
 CREATE TABLE HARBORS_IN_ITINERARIES (
     id INT IDENTITY(1,1) PRIMARY KEY,

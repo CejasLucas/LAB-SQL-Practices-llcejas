@@ -13,3 +13,5 @@ INSERT INTO POSITION (position_type, position_description) VALUES
 ('Boatswain', 'Leads deck personnel and coordinates operational tasks.'),
 ('Cook', 'Responsible for preparing meals for the crew.'),
 ('Marine Mechanic', 'Performs mechanical maintenance and repairs in the engine room.');
+
+SELECT * FROM POSITION;

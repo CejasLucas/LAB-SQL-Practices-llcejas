@@ -103,3 +103,5 @@ INSERT INTO SHIP (name_or_nickname, registration_number, start_of_activity, orig
 ('Golden Princess', 'UY-GPR-8855', '2015-05-15', 'Colonia', 'Uruguay'),
 ('Polar Princess', 'IS-PPR-9966', '2008-08-08', 'Reykjavik', 'Iceland'),
 ('Mar Princesa', 'AR-MPR-1077', '2006-06-06', 'Buenos Aires', 'Argentina');
+
+SELECT * FROM SHIP;

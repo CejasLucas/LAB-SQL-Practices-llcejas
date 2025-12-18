@@ -23,3 +23,5 @@ INSERT INTO ITINERARY (description) VALUES
 ('Cargo route from Saint Petersburg to Rotterdam transporting electronics and industrial machinery.'),
 ('South American logistics route from Guayaquil to Los Angeles with agricultural exports and cleaning products.'),
 ('Commercial itinerary from Manila to Hong Kong transporting textiles, electronics, and packaged goods.');
+
+SELECT * FROM ITINERARY;

@@ -43,3 +43,5 @@ INSERT INTO HARBOR (name, region, city, country, port_type) VALUES
 ('Port of Gothenburg', 'Västra Götaland', 'Gothenburg', 'Sweden', 'NIGHT'),
 ('Port of Alexandria', 'Alexandria Governorate', 'Alexandria', 'Egypt', 'DAY'),
 ('Port of Izmir', 'Izmir Province', 'Izmir', 'Turkey', 'NIGHT');
+
+SELECT * FROM HARBOR;
